@@ -1,0 +1,76 @@
+$(function() {
+    $(".completeness").each(function() {
+        var f = $(this).attr("data-id"),
+            r = localStorage.getItem(f + "data"),
+            t;
+        if (r != null && r !== "") {
+            var e = JSON.parse(r),
+                n = 0,
+                u = $(this).attr("data-total");
+            for (i in e.qs) e.qs[i].val !== "" && n++;
+            $(this).parent().find(".a-val").text(n);
+            $(this).parent().find(".ua-val").text(u - n);
+            t = $(this).closest('div[class*="thumbnail"]');
+            t.addClass("alt-bg");
+            t.find(".item-main").hide();
+            t.find(".item-alt").show();
+            t.find(".take-test").text("Resume");
+            t.find(".take-test").parent().addClass("btn-success").removeClass("btn-primary");
+            chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: "incomplete" + f,
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: !1,
+                    type: "pie",
+                    height: 95,
+                    width: 158,
+                    animation: !1,
+                    margin: [-10, 0, -10, 0],
+                    backgroundColor: "#e9f3fd"
+                },
+                title: {
+                    text: "<b>" + Math.floor(n / u * 100) + "%<\/b>",
+                    align: "center",
+                    verticalAlign: "middle",
+                    y: 8,
+                    style: {
+                        fontSize: "1em"
+                    }
+                },
+                tooltip: {
+                    enabled: !1
+                },
+                plotOptions: {
+                    pie: {
+                        animation: !1,
+                        allowPointSelect: !1,
+                        dataLabels: {
+                            enabled: !1
+                        },
+                        borderWidth: 0
+                    }
+                },
+                colors: ["#64E572", "#999999"],
+                series: [{
+                    point: {
+                        events: {
+                            mouseOver: function() {
+                                this.state = "hover"
+                            }
+                        }
+                    },
+                    colorByPoint: !0,
+                    innerSize: "60%",
+                    data: [{
+                        name: "answered",
+                        y: n
+                    }, {
+                        name: "unanswered",
+                        y: u - n
+                    }]
+                }]
+            })
+        }
+    })
+})

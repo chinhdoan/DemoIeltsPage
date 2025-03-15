@@ -1,0 +1,92 @@
+.test-container {
+    padding-top: 10px;
+    padding-bottom: 80px
+}
+
+.listening-test-section {}
+
+.affix {
+    top: 0;
+    z-index: 1;
+    width: 100%
+}
+
+@media screen and (min-width:1000px) {
+    .exam-section {
+        padding: 0 10px
+    }
+
+    .affix {
+        width: auto
+    }
+
+    .test-container {
+        max-width: 1140px;
+        margin: auto;
+        padding-bottom: 100px
+    }
+
+    .side-col {
+        float: right;
+        width: 320px;
+        position: initial
+    }
+
+    .controller-section {
+        border: 1px solid #ffa500;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 0 5px
+    }
+
+    .question-label {
+        display: initial;
+        font-size: 24px;
+        font-weight: bold;
+        border-bottom: #999 3px solid;
+        line-height: 2em;
+        width: 100%;
+        margin-bottom: 10px
+    }
+
+    .listening-test-section {
+        width: auto;
+        overflow: hidden
+    }
+
+    .legend {
+        width: 50%;
+        float: left
+    }
+
+    .clock {
+        width: 50%;
+        text-align: right;
+        line-height: 3.5em
+    }
+
+    .controller-button {
+        width: 100%;
+        float: none;
+        text-align: center;
+        padding-top: 15px;
+        clear: both
+    }
+
+    .controller-button a {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 18px;
+        padding: 6px 18px
+    }
+
+    .controller-button a i {
+        display: initial;
+        padding-right: 5px
+    }
+
+    .controller-lower {
+        border-top: none;
+        padding: 15px
+    }
+}

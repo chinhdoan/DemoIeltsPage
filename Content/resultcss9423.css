@@ -1,0 +1,210 @@
+.stats-container {
+    overflow: auto
+}
+
+.lower-stats {
+    display: block;
+    padding-bottom: 20px;
+    height: 360px
+}
+
+.upper-stats {
+    text-align: center
+}
+
+.upper-stats p {
+    font-size: 1.5em
+}
+
+#chartContainer {
+    width: 100%;
+    height: 200px
+}
+
+.left-lower {
+    float: left
+}
+
+.left-lower,
+.right-lower {
+    width: 45%;
+    display: block
+}
+
+.right-lower {
+    float: right
+}
+
+.stats-block {
+    display: block;
+    border-bottom: dotted 3px #ddd;
+    padding-left: 10px;
+    margin-bottom: 5px
+}
+
+.stats-value {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    color: #1e90ff;
+    line-height: 1em
+}
+
+.stats-title {
+    display: block;
+    font-size: 1.2em;
+    color: gray
+}
+
+.border-green {
+    border-left: solid 10px #64e572
+}
+
+.border-orange {
+    border-left: solid 10px #ff9655
+}
+
+.border-yellow {
+    border-left: solid 10px #fff263
+}
+
+.progress {
+    height: 40px
+}
+
+.progress-bar {
+    line-height: 40px;
+    font-size: 1.5em;
+    font-weight: bold
+}
+
+.stats-left {
+    display: none
+}
+
+.vgood {
+    background: #98c244;
+    font-weight: bold;
+    color: #fff
+}
+
+.good {
+    background: #dcab35;
+    font-weight: bold;
+    color: #fff
+}
+
+.compenent {
+    background: #d02537;
+    font-weight: bold;
+    color: #fff
+}
+
+.modest {
+    background: #54aacb;
+    font-weight: bold;
+    color: #fff
+}
+
+.answer {
+    font-weight: bold;
+    color: red
+}
+
+.other-tests {
+    padding-top: 20px
+}
+
+.other-tests ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none
+}
+
+.other-tests ul li {
+    display: inline-block
+}
+
+.stats-container h1 {
+    font-size: 22px
+}
+
+.stats-container h3 {
+    font-size: 18px
+}
+
+@media screen and (min-width:768px) {
+    .lower-stats {
+        height: auto
+    }
+
+    #chartContainer {
+        width: 100%;
+        height: 300px
+    }
+
+    .stats-container h1 {
+        font-size: 30px
+    }
+
+    .stats-container h3 {
+        font-size: 24px
+    }
+
+    .lower-stats {
+        overflow: auto
+    }
+
+    #chartContainer,
+    .left-lower {
+        width: 33%;
+        float: left
+    }
+
+    .right-lower {
+        float: right;
+        width: 33%
+    }
+
+    .left-lower,
+    .right-lower {
+        padding-top: 60px
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .stats-container h1 {
+        font-size: 36px
+    }
+
+    .left-lower,
+    .right-lower {
+        padding-top: 20px
+    }
+
+    .stats-value {
+        line-height: 1.5em
+    }
+
+    .stats-value {
+        font-size: 2.5em
+    }
+
+    .stats-right {
+        min-width: 700px;
+        max-width: 830px;
+        float: left
+    }
+
+    .stats-left {
+        width: 300px;
+        float: left;
+        display: block;
+        margin-left: 10px;
+        margin-top: 60px
+    }
+
+    .container {
+        max-width: 1170px
+    }
+}
